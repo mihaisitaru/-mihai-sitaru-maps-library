@@ -1,0 +1,14 @@
+@if (showGoogleMaps) {
+<google-map
+  height="700px"
+  width="700px"
+  [center]="center"
+  [zoom]="zoom"
+  (mapClick)="moveMap($event)"
+  (mapMousemove)="move($event)">
+  <map-marker [options]="markerOptions"></map-marker>
+</google-map>
+
+<div>Latitude: {{ display?.lat }}</div>
+<div>Longitude: {{ display?.lng }}</div>
+}
